@@ -262,7 +262,7 @@ bar {
     # status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
     # status_command py3status
       status_command ~/bumblebee-status/bumblebee-status \
-                     -m load brightness pasink nic battery date time \
+                     -m load nic brightness amixer bluetooth battery date time \
                      -p time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
                      -t powerline
 
