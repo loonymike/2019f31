@@ -45,8 +45,8 @@ set $lock_bg ~/Downloads/grkids.jpg
 bindsym $mod+Shift+x exec swaylock -i $lock_bg
 
 exec swayidle -w \
-#       timeout 600 'swaylock -f -c 000000 -i $lock_bg' \
-#       timeout 660 'swaymsg "output * dpms off"' \
+#       timeout 300 'swaylock -f -c 000000 -i $lock_bg' \
+        timeout 600 'swaymsg "output * dpms off"' \
              resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f -c 000000 -i $lock_bg'
 
@@ -262,7 +262,7 @@ bar {
     # status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
     # status_command py3status
       status_command ~/bumblebee-status/bumblebee-status \
-                     -m load nic brightness amixer bluetooth battery date time \
+                     -m load cpu nic brightness amixer bluetooth battery-upower date time \
                      -p time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
                      -t powerline
 
